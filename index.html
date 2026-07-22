@@ -1,6 +1,5 @@
 <!DOCTYPE html><html lang="en">
-<head>
-<meta charset="UTF-8">
+<head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Wyatt Movie</title><style>
 
 *{
@@ -72,6 +71,7 @@ nav a:hover{
     background:transparent;
     color:#fff;
     font-size:14px;
+    margin-left:8px;
 }
 
 /* HERO */
@@ -153,6 +153,8 @@ nav a:hover{
     cursor:pointer;
     background:#151515;
     transition:.3s;
+    text-decoration:none;
+    color:white;
 }
 
 .genre-card:hover{
@@ -164,6 +166,7 @@ nav a:hover{
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
 }
 
 .genre-name{
@@ -172,6 +175,7 @@ nav a:hover{
     display:flex;
     align-items:flex-end;
     padding:12px;
+
     background:linear-gradient(
         transparent,
         rgba(0,0,0,.9)
@@ -336,13 +340,13 @@ footer{
 
 </style></head><body><!-- HEADER --><header><div class="logo">
 Wyatt<span> Movie</span>
-</div><nav><a href="index.html">Home</a>
-
-<a href="#genres">Genres</a>
-
-<a href="#movies">Movies</a>
-
-</nav><div class="search-box">🔍
+</div><nav><a href="index.html">
+Home
+</a><a href="#genres">
+Genres
+</a><a href="#movies">
+Movies
+</a></nav><div class="search-box">🔍
 
 <input
 type="text"
@@ -352,27 +356,29 @@ onkeyup="searchMovies()"
 
 «»
 
-</div></header><!-- HERO --><section class="hero"><div class="hero-content"><h1>Welcome to Wyatt Movie</h1><p>
+</div></header><!-- HERO --><section class="hero"><div class="hero-content"><h1>
+Welcome to Wyatt Movie
+</h1><p>
 Discover movies from different genres.
 Browse Adventure, Action, Fantasy, Comedy, Drama and more.
 </p><a href="#movies" class="hero-btn">
 ▶ Browse Movies
 </a></div></section><!-- MAIN --><main class="container"><!-- GENRES --><section id="genres"><h2 class="section-title">
-🎭 Browse Genres
-</h2><div class="genre-grid"><a href="adventure.html" class="genre-card"><img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
-<h3>🌿 Adventure</h3>
-</div></a><a href="action.html" class="genre-card"><img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
-<h3>💥 Action</h3>
-</div></a><a href="fantasy.html" class="genre-card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
-<h3>🧙 Fantasy</h3>
-</div></a><a href="comedy.html" class="genre-card"><img src="https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
-<h3>😂 Comedy</h3>
-</div></a><a href="drama.html" class="genre-card"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
-<h3>🎭 Drama</h3>
-</div></a><a href="scifi.html" class="genre-card"><img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
-<h3>🚀 Sci-Fi</h3>
+Browse Genres
+</h2><div class="genre-grid"><!-- ADVENTURE --><a href="adventure.html" class="genre-card"><img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>Adventure</h3>
+</div></a><!-- ACTION --><a href="action.html" class="genre-card"><img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>Action</h3>
+</div></a><!-- FANTASY --><a href="fantasy.html" class="genre-card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>Fantasy</h3>
+</div></a><!-- COMEDY --><a href="comedy.html" class="genre-card"><img src="https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>Comedy</h3>
+</div></a><!-- DRAMA --><a href="drama.html" class="genre-card"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>Drama</h3>
+</div></a><!-- SCI-FI --><a href="scifi.html" class="genre-card"><img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>Sci-Fi</h3>
 </div></a></div></section><!-- 15 MOVIE CARDS --><section id="movies"><h2 class="section-title">
-🎬 Featured Movies
+Featured Movies
 </h2><div class="movie-grid" id="movieGrid"><!-- 1 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Adventure Collection</h3><p>Adventure • HD</p><a href="adventure.html" class="watch-btn">
 ▶ Watch Now
 </a></div></div><!-- 2 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Action Collection</h3><p>Action • HD</p><a href="action.html" class="watch-btn">
@@ -407,7 +413,7 @@ Browse Adventure, Action, Fantasy, Comedy, Drama and more.
 
 <br>Your Movie Collection
 
-</footer><script>
+</footer><!-- SEARCH SCRIPT --><script>
 
 function searchMovies(){
 
@@ -429,7 +435,16 @@ function searchMovies(){
         .textContent
         .toLowerCase();
 
-        if(title.includes(input)){
+        let genre =
+        card
+        .querySelector("p")
+        .textContent
+        .toLowerCase();
+
+        if(
+            title.includes(input) ||
+            genre.includes(input)
+        ){
 
             card.style.display="";
 
@@ -444,4 +459,4 @@ function searchMovies(){
 }
 
 </script></body>
-                                                   </html>
+</html>
