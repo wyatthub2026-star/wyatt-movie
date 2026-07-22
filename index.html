@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Wyatt Movie</title><style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#080808;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.97);
+    border-bottom:1px solid #292929;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#e50914;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#e50914;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#1b1b1b;
+    border-radius:25px;
+    padding:9px 15px;
+    width:230px;
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#fff;
+    font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:470px;
+    display:flex;
+    align-items:center;
+    padding:60px 7%;
+
+    background:
+    linear-gradient(
+        to right,
+        #080808 5%,
+        rgba(8,8,8,.85) 45%,
+        rgba(8,8,8,.25)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#ddd;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#e50914;
+    color:#fff;
+    padding:13px 25px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero-btn:hover{
+    background:#b20710;
+}
+
+/* MAIN */
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.section-title{
+    font-size:27px;
+    margin-bottom:22px;
+}
+
+/* GENRES */
+
+.genre-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+    margin-bottom:50px;
+}
+
+.genre-card{
+    height:130px;
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    cursor:pointer;
+    background:#151515;
+    transition:.3s;
+}
+
+.genre-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.6);
+}
+
+.genre-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.genre-name{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:flex-end;
+    padding:12px;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+}
+
+.genre-name h3{
+    font-size:16px;
+}
+
+/* MOVIES */
+
+.movie-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.movie-card{
+    background:#151515;
+    border-radius:9px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.movie-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.7);
+}
+
+.movie-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.movie-info{
+    padding:13px;
+}
+
+.movie-info h3{
+    font-size:16px;
+    margin-bottom:7px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.movie-info p{
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:12px;
+}
+
+.watch-btn{
+    display:block;
+    text-align:center;
+    background:#e50914;
+    color:#fff;
+    padding:9px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.watch-btn:hover{
+    background:#b20710;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+    background:#050505;
+    color:#777;
+    border-top:1px solid #222;
+}
+
+/* TABLET */
+
+@media(max-width:1100px){
+
+    .genre-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .movie-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        flex-wrap:wrap;
+        padding:12px 4%;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        order:3;
+        width:100%;
+        justify-content:center;
+    }
+
+    .search-box{
+        width:170px;
+    }
+
+    .hero{
+        min-height:430px;
+        padding:40px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .genre-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .genre-card{
+        height:120px;
+    }
+
+    .movie-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .movie-card img{
+        height:230px;
+    }
+
+}
+
+/* SMALL PHONE */
+
+@media(max-width:360px){
+
+    .movie-card img{
+        height:190px;
+    }
+
+}
+
+</style></head><body><!-- HEADER --><header><div class="logo">
+Wyatt<span> Movie</span>
+</div><nav><a href="index.html">Home</a>
+
+<a href="#genres">Genres</a>
+
+<a href="#movies">Movies</a>
+
+</nav><div class="search-box">🔍
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search movies..."
+onkeyup="searchMovies()"
+
+«»
+
+</div></header><!-- HERO --><section class="hero"><div class="hero-content"><h1>Welcome to Wyatt Movie</h1><p>
+Discover movies from different genres.
+Browse Adventure, Action, Fantasy, Comedy, Drama and more.
+</p><a href="#movies" class="hero-btn">
+▶ Browse Movies
+</a></div></section><!-- MAIN --><main class="container"><!-- GENRES --><section id="genres"><h2 class="section-title">
+🎭 Browse Genres
+</h2><div class="genre-grid"><a href="adventure.html" class="genre-card"><img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>🌿 Adventure</h3>
+</div></a><a href="action.html" class="genre-card"><img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>💥 Action</h3>
+</div></a><a href="fantasy.html" class="genre-card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>🧙 Fantasy</h3>
+</div></a><a href="comedy.html" class="genre-card"><img src="https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>😂 Comedy</h3>
+</div></a><a href="drama.html" class="genre-card"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>🎭 Drama</h3>
+</div></a><a href="scifi.html" class="genre-card"><img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=600&q=80"><div class="genre-name">
+<h3>🚀 Sci-Fi</h3>
+</div></a></div></section><!-- 15 MOVIE CARDS --><section id="movies"><h2 class="section-title">
+🎬 Featured Movies
+</h2><div class="movie-grid" id="movieGrid"><!-- 1 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Adventure Collection</h3><p>Adventure • HD</p><a href="adventure.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 2 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Action Collection</h3><p>Action • HD</p><a href="action.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 3 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Fantasy Collection</h3><p>Fantasy • HD</p><a href="fantasy.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 4 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Comedy Collection</h3><p>Comedy • HD</p><a href="comedy.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 5 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Drama Collection</h3><p>Drama • HD</p><a href="drama.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 6 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Sci-Fi Collection</h3><p>Sci-Fi • HD</p><a href="scifi.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 7 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Horror Collection</h3><p>Horror • HD</p><a href="horror.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 8 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Romance Collection</h3><p>Romance • HD</p><a href="romance.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 9 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Thriller Collection</h3><p>Thriller • HD</p><a href="thriller.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 10 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Mystery Collection</h3><p>Mystery • HD</p><a href="mystery.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 11 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1453873623425-04e3560fec59?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Crime Collection</h3><p>Crime • HD</p><a href="crime.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 12 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Martial Arts</h3><p>Martial Arts • HD</p><a href="martial.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 13 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Sports Collection</h3><p>Sports • HD</p><a href="sports.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 14 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Family Collection</h3><p>Family • HD</p><a href="family.html" class="watch-btn">
+▶ Watch Now
+</a></div></div><!-- 15 --><div class="movie-card"><img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=600&q=80"><div class="movie-info"><h3>Animation Collection</h3><p>Animation • HD</p><a href="animation.html" class="watch-btn">
+▶ Watch Now
+</a></div></div></div></section></main><!-- FOOTER --><footer>© 2026 Wyatt Movie
+
+<br>Your Movie Collection
+
+</footer><script>
+
+function searchMovies(){
+
+    let input =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase();
+
+    let cards =
+    document
+    .querySelectorAll(".movie-card");
+
+    cards.forEach(function(card){
+
+        let title =
+        card
+        .querySelector("h3")
+        .textContent
+        .toLowerCase();
+
+        if(title.includes(input)){
+
+            card.style.display="";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+</script></body>
+                                                   </html>
