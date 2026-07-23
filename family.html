@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Family Collection - Wyatt Movie</title><style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #111, #252525);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ff9800;
+}
+
+header h1 {
+    color: #ff9800;
+    font-size: 28px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 6px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 18px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #ff9800;
+}
+
+/* MAIN */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 15px 0 30px;
+    font-size: 26px;
+}
+
+/* MOVIE GRID */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* MOVIE CARD */
+.movie-card {
+    background: #181818;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255,152,0,0.3);
+}
+
+/* IMAGE */
+.movie-image {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+}
+
+/* MOVIE INFO */
+.movie-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.movie-info h2 {
+    color: #ff9800;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.movie-info p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* WATCH BUTTON */
+.watch-btn {
+    display: block;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.watch-btn:hover {
+    background: linear-gradient(135deg, #ffb300, #ff7043);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    border-top: 1px solid #222;
+    margin-top: 30px;
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .movie-image {
+        height: 210px;
+    }
+
+    .movie-info {
+        padding: 10px;
+    }
+
+    .movie-info h2 {
+        font-size: 16px;
+    }
+
+    .movie-info p {
+        font-size: 12px;
+    }
+
+    .watch-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+</style></head><body><header>
+    <h1>🎬 Wyatt Movie</h1>
+    <p>Family Collection</p>
+</header><a href="index.html" class="back-btn">← Back to Home</a>
+
+<main class="container"><h2 class="section-title">👨‍👩‍👧‍👦 Family Collection</h2>
+
+<div class="movie-grid">
+
+    <!-- THE HUNTSMAN CARD -->
+    <div class="movie-card">
+
+        <!-- Huntsman-style image -->
+        <img 
+            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+            class="movie-image"
+            alt="The Huntsman">
+
+        <div class="movie-info">
+
+            <h2>🏹 The Huntsman</h2>
+
+            <p>Fantasy • Adventure • Family</p>
+
+            <a 
+                href="https://drive.google.com/file/d/15i6rinbt0wvKpdNvcPJxoYXSdQudpYKK/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="watch-btn">
+                ▶ Watch Now
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main><footer>
+    © 2026 Wyatt Movie | Family Collection
+</footer></body>
+</html>
