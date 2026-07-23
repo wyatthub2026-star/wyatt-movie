@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sci-Fi Movies - Wyatt Movie</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#080808;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.97);
+    border-bottom:1px solid #292929;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#e50914;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#e50914;
+}
+
+/* HERO */
+
+.hero{
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    padding:50px 7%;
+
+    background:
+    linear-gradient(
+        to right,
+        #080808 10%,
+        rgba(8,8,8,.75),
+        rgba(8,8,8,.25)
+    ),
+    url("https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:#ddd;
+    line-height:1.6;
+}
+
+/* MAIN */
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.back-btn{
+    display:inline-block;
+    color:#fff;
+    background:#222;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    margin-bottom:30px;
+}
+
+.back-btn:hover{
+    background:#e50914;
+}
+
+/* TITLE */
+
+.section-title{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+/* MOVIE GRID */
+
+.movie-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+/* MOVIE CARD */
+
+.movie-card{
+    background:#151515;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.movie-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.7);
+}
+
+.movie-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.movie-info{
+    padding:15px;
+}
+
+.movie-info h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.movie-info p{
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:13px;
+}
+
+.watch-btn{
+    display:block;
+    text-align:center;
+    background:#e50914;
+    color:#fff;
+    padding:10px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.watch-btn:hover{
+    background:#b20710;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    background:#050505;
+    color:#777;
+    border-top:1px solid #222;
+}
+
+/* TABLET */
+
+@media(max-width:1100px){
+
+    .movie-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        flex-wrap:wrap;
+        padding:12px 4%;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        order:3;
+    }
+
+    .hero{
+        min-height:280px;
+        padding:40px 5%;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .movie-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .movie-card img{
+        height:230px;
+    }
+
+}
+
+/* SMALL PHONE */
+
+@media(max-width:360px){
+
+    .movie-card img{
+        height:190px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+Wyatt<span> Movie</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#genres">Genres</a>
+<a href="index.html#movies">Movies</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>🚀 Sci-Fi Movies</h1>
+
+<p>
+Explore amazing science fiction movies and futuristic adventures.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="container">
+
+<a href="index.html" class="back-btn">
+← Back to Home
+</a>
+
+
+<h2 class="section-title">
+Sci-Fi Collection
+</h2>
+
+
+<div class="movie-grid">
+
+
+<!-- SCI-FI MOVIE CARD -->
+
+<div class="movie-card">
+
+<img 
+src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=600&q=80"
+alt="Sci-Fi Movie"
+>
+
+<div class="movie-info">
+
+<h3>Sci-Fi Movie</h3>
+
+<p>Science Fiction • HD</p>
+
+<a 
+href="https://drive.google.com/file/d/1i-Sj-GdNpzkOvu7w_kkMgkzbDntwx4IF/view?usp=drivesdk"
+target="_blank"
+class="watch-btn"
+>
+▶ Watch Movie
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Wyatt Movie
+
+<br>
+
+Your Movie Collection
+
+</footer>
+
+
+</body>
+</html>
